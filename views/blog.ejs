@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<h1 style="text-align: center;">BLOGS</h1>
+
+<p>Explore a treasure trove of captivating articles, thought-provoking insights, and inspiring stories from our talented community of bloggers. Our blog page is a gateway to a world of knowledge, creativity, and diverse perspectives.</p>
+
+<p>Immerse yourself in a wide range of topics, including travel, lifestyle, technology, arts, personal development, and more. Our bloggers pour their hearts and minds into each piece, delivering informative, entertaining, and meaningful content that resonates with readers like you.</p>
+
+<% posts.forEach(function(post){ %>
+    <h1><%= post.title %></h1>
+    <p><%= post.content.substring(0,100) + "..." %>
+      <a href="/posts/<%=  post._id %> ">Read More</a>
+    </p>
+    <% }); %>
+
+
+<%- include("partials/footer") -%>
